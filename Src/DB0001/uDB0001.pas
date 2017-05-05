@@ -54,7 +54,7 @@ begin
       if NOT FDBConnection.Connected  then
         FDBConnection.Connected := True;
 
-      ShowMessage('Test Connected');
+      ShowMessage('Test Edited from git');
 
     except
       on E:Exception do
