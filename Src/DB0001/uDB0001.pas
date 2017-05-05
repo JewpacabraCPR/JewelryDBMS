@@ -54,7 +54,7 @@ begin
       if NOT FDBConnection.Connected  then
         FDBConnection.Connected := True;
 
-      ShowMessage('Connected');
+      ShowMessage('Test Connected');
 
     except
       on E:Exception do
