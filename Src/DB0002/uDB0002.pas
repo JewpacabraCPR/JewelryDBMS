@@ -8,6 +8,6 @@ implementation
 procedure testing;
 begin
 
-  uDB0001.DBConnection;
+  uDB0001.DBConnect;
 end;
 end.

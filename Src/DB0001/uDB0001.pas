@@ -20,12 +20,12 @@ type
 
     { Public declarations }
   end;
-  procedure DBConnection;
+  procedure DBConnect;
+  procedure DBDisconnect;
 var
   Form1: TForm1;
   FDBConnection : TFDConnection;
   FDFBDriver : TFDPhysFBDriverLink;
-
 
 implementation
 
@@ -33,19 +33,22 @@ implementation
 
 { TForm1 }
 
-procedure DBConnection;
+procedure DBConnect;
+var
+  currentDBPath : String;
 begin
   try
     FDFBDriver := TFDPhysFBDriverLink.Create(nil);
     FDFBDriver.VendorLib := ExtractFileDir(ExtractFileDir(Application.ExeName)) + '\Lib\fbclient.dll';
-    ShowMessage('4444Testing neng hah');
-    FDBConnection := TFDConnection.Create(nil);
 
-    with FDBConnection.Params do begin
+    FDBConnection := TFDConnection.Create(nil);
+    currentDBPath := ExtractFileDir(ExtractFileDir(Application.ExeName)) + '\DB\JEWELRYMNGMT.FDB';
+    with FDBConnection.Params do
+    begin
       Clear;
       Add('DriverID=FB');
       Add('Server=localhost');
-      Add('Database=D:\MyManagement\DB\JEWELRYMNGMT.FDB');
+      Add('Database=' + currentDBPath);
       Add('User_Name=sysdba');
       Add('Password=masterkey');
     end;
@@ -54,7 +57,7 @@ begin
       if NOT FDBConnection.Connected  then
         FDBConnection.Connected := True;
 
-      ShowMessage('Test Edited from git');
+      ShowMessage('Databse Connected');
 
     except
       on E:Exception do
@@ -72,10 +75,15 @@ begin
   end;
 end;
 
+procedure DBDisconnect;
+begin
+
+
+end;
 
 procedure TForm1.FormShow(Sender: TObject);
 begin
-  DBConnection;
+  DBConnect;
 end;
 
 end.
