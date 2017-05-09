@@ -2,8 +2,8 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2017/05/05 10:40:39.000.452,=C:\Users\Panharath\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2017/05/05 10:41:31.000.422,D:\MyManagement\Src\JEWELRYMNGMT\Main.dfm=C:\Users\Panharath\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2017/05/05 10:41:31.000.422,D:\MyManagement\Src\JEWELRYMNGMT\Main.pas=C:\Users\Panharath\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2017/05/05 10:41:48.000.027,D:\MyManagement\Src\JEWELRYMNGMT\JEWELRYMNGMT.dproj=C:\Users\Panharath\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2017/05/05 10:41:31.000.422,C:\Users\Panharath\Documents\Embarcadero\Studio\Projects\Unit1.dfm=D:\MyManagement\Src\JEWELRYMNGMT\Main.dfm</Transaction>
+    <Transaction>2017/05/05 10:41:31.000.422,C:\Users\Panharath\Documents\Embarcadero\Studio\Projects\Unit1.pas=D:\MyManagement\Src\JEWELRYMNGMT\Main.pas</Transaction>
+    <Transaction>2017/05/05 10:41:48.000.027,C:\Users\Panharath\Documents\Embarcadero\Studio\Projects\Project1.dproj=D:\MyManagement\Src\JEWELRYMNGMT\JEWELRYMNGMT.dproj</Transaction>
   </Transactions>
 </BorlandProject>

@@ -10,4 +10,7 @@ begin
 
   uDB0001.DBConnect;
 end;
+
+exports
+  testing;
 end.
