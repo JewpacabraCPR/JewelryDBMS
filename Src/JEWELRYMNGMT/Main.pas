@@ -33,13 +33,13 @@ begin
     PackageModule := LoadPackage('DB0002.bpl');
     if PackageModule <> 0 then
     begin
-ShowMessage('package loaded');
       @myTesting := GetProcAddress(PackageModule, 'testing');
       if  @myTesting <> nil then
       begin
         myTesting;
       end
-      else begin
+      else
+      begin
         ShowMessage('Error loading package');
       end;
     end;

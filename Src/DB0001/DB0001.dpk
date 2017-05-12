@@ -34,7 +34,8 @@ requires
   FireDAC,
   FireDACCommonDriver,
   FireDACCommon,
-  FireDACIBDriver;
+  FireDACIBDriver,
+  VCLFiredac;
 
 contains
   uDB0001 in 'uDB0001.pas' {Form1};

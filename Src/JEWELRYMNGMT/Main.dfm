@@ -16,8 +16,8 @@ object Form1: TForm1
   object btn1: TButton
     Left = 128
     Top = 72
-    Width = 75
-    Height = 25
+    Width = 81
+    Height = 33
     Caption = 'btn1'
     TabOrder = 0
     OnClick = btn1Click
