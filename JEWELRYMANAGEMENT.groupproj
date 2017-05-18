@@ -12,6 +12,15 @@
         <Projects Include="Src\DB0002\DB0002.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="Src\JMDBCom\JMDBCom.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Src\CM\CM0001\CM0001.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Src\CM\CM0002\CM0002.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -47,14 +56,41 @@
     <Target Name="DB0002:Make">
         <MSBuild Projects="Src\DB0002\DB0002.dproj" Targets="Make"/>
     </Target>
+    <Target Name="JMDBCom">
+        <MSBuild Projects="Src\JMDBCom\JMDBCom.dproj"/>
+    </Target>
+    <Target Name="JMDBCom:Clean">
+        <MSBuild Projects="Src\JMDBCom\JMDBCom.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="JMDBCom:Make">
+        <MSBuild Projects="Src\JMDBCom\JMDBCom.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CM0001">
+        <MSBuild Projects="Src\CM\CM0001\CM0001.dproj"/>
+    </Target>
+    <Target Name="CM0001:Clean">
+        <MSBuild Projects="Src\CM\CM0001\CM0001.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CM0001:Make">
+        <MSBuild Projects="Src\CM\CM0001\CM0001.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CM0002">
+        <MSBuild Projects="Src\CM\CM0002\CM0002.dproj"/>
+    </Target>
+    <Target Name="CM0002:Clean">
+        <MSBuild Projects="Src\CM\CM0002\CM0002.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CM0002:Make">
+        <MSBuild Projects="Src\CM\CM0002\CM0002.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="JEWELRYMNGMT;DB0001;DB0002"/>
+        <CallTarget Targets="JEWELRYMNGMT;DB0001;DB0002;JMDBCom;CM0001;CM0002"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="JEWELRYMNGMT:Clean;DB0001:Clean;DB0002:Clean"/>
+        <CallTarget Targets="JEWELRYMNGMT:Clean;DB0001:Clean;DB0002:Clean;JMDBCom:Clean;CM0001:Clean;CM0002:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="JEWELRYMNGMT:Make;DB0001:Make;DB0002:Make"/>
+        <CallTarget Targets="JEWELRYMNGMT:Make;DB0001:Make;DB0002:Make;JMDBCom:Make;CM0001:Make;CM0002:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>

@@ -35,7 +35,8 @@ requires
   FireDACCommonDriver,
   FireDACCommon,
   FireDACIBDriver,
-  DB0001;
+  DB0001,
+  JMDBCom;
 
 contains
   uDB0002 in 'uDB0002.pas';
