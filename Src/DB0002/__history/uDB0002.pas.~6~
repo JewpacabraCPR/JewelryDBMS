@@ -1,0 +1,41 @@
+unit uDB0002;
+
+interface
+uses
+  uDB0001, Vcl.Dialogs, uJMDBCom, System.SysUtils, Vcl.Forms;
+  procedure testing;
+  procedure testSQL;
+
+
+implementation
+
+procedure testing;
+begin
+  uDB0001.DBConnect;
+end;
+
+procedure testSQL;
+var
+  myJMDBCOM : TJMDBCom;
+  sVendorLib, sDBPath : String;
+begin
+
+//  uDB0001.TForm1.Create(nil).SelectSQL;
+  myJMDBCOM := TJMDBCom.Create(nil);
+  sVendorLib := ExtractFileDir(ExtractFileDir(Application.ExeName)) + '\Lib\fbclient.dll';
+  sDBPath    := ExtractFileDir(ExtractFileDir(Application.ExeName)) + '\DB\JEWELRYMNGMT.FDB';
+
+  try
+    if myJMDBCOM.DBConnection(sDBPath,sVendorLib)then
+      ShowMessage('Connected')
+    else
+      ShowMessage('Connection Failed');
+  finally
+    if Assigned(myJMDBCOM) then FreeAndNil(myJMDBCOM);
+
+  end;
+end;
+
+exports
+  testing, testSQL;
+end.

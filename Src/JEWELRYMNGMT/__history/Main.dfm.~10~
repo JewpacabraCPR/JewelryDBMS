@@ -1,0 +1,49 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 349
+  ClientWidth = 758
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object btn1: TButton
+    Left = 669
+    Top = 8
+    Width = 81
+    Height = 33
+    Caption = 'btn1'
+    TabOrder = 0
+    OnClick = btn1Click
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 48
+    Width = 761
+    Height = 297
+    Caption = 'Panel1'
+    TabOrder = 1
+  end
+  object MainMenu1: TMainMenu
+    object File1: TMenuItem
+      Caption = #6047#6070#6016#6043#6098#6036#6020
+      object Customer1: TMenuItem
+        Tag = 10001
+        Caption = #6050#6031#6071#6032#6071#6023#6035
+        OnClick = MenuClick
+      end
+      object Item1: TMenuItem
+        Tag = 10002
+        Caption = #6018#6098#6042#6079#6020
+        OnClick = MenuClick
+      end
+    end
+  end
+end

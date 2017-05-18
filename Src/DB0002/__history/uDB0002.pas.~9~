@@ -1,0 +1,68 @@
+unit uDB0002;
+
+interface
+uses
+  uDB0001, Vcl.Dialogs, uJMDBCom, System.SysUtils, Vcl.Forms, FireDAC.Comp.Client;
+  procedure testing;
+  procedure testSQL;
+
+
+implementation
+
+procedure testing;
+begin
+  uDB0001.DBConnect;
+end;
+
+procedure testSQL;
+var
+  myJMDBCOM : TJMDBCom;
+  qryQuery  : TFDQuery;
+  sVendorLib, sDBPath : String;
+begin
+
+//  uDB0001.TForm1.Create(nil).SelectSQL;
+  myJMDBCOM := TJMDBCom.Create(nil);
+  sVendorLib := ExtractFileDir(ExtractFileDir(Application.ExeName)) + '\Lib\fbclient.dll';
+  sDBPath    := ExtractFileDir(ExtractFileDir(Application.ExeName)) + '\DB\JEWELRYMNGMT.FDB';
+
+  try
+    if myJMDBCOM.DBConnection(sDBPath,sVendorLib)then
+      ShowMessage('Connected')
+    else
+      ShowMessage('Connection Failed');
+
+    qryQuery := myJMDBCOM.CreateQuery(myJMDBCOM.conn);
+    qryQuery.Connection := myJMDBCOM.conn;
+    qryQuery.Transaction :=  qryQuery.UpdateTransaction;
+
+    qryQuery.SQL.Text := 'select * from customer;';
+
+    qryQuery.Active := True;
+//ShowMessage('1');
+    if qryQuery.Active then
+    begin
+      if qryQuery.RecordCount > 0 then
+      begin
+        Showmessage(
+        'Customer ID    : ' + qryQuery.FieldByName('CUSTID')   .AsString +#13#10+
+        'Customer Name  : ' + UTF8ToUnicodeString(qryQuery.FieldByName('CUSTNAME').AsAnsiString) +#13#10+
+        'Customer IDNO  : ' + qryQuery.FieldByName('IDNO')     .AsString +#13#10+
+        'Customer DOB   : ' + qryQuery.FieldByName('DOB')      .AsString +#13#10+
+        'Customer EMAIL : ' + qryQuery.FieldByName('EMAIL')    .AsString
+        );
+      end;
+    end;
+
+
+  finally
+   // if Assigned(qryQuery) then myJMDBCOM.ReleaseQuery;
+    if myJMDBCOM.conn.Connected then myJMDBCOM.ReleaseConnection;
+
+
+  end;
+end;
+
+exports
+  testing, testSQL;
+end.

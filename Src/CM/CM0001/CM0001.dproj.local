@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2017/05/17 11:42:54.000.858,=rtl.dcp</Transaction>
+    <Transaction>2017/05/17 11:43:22.000.171,D:\MyManagement\JewelryDBMS\Src\CM\CM0001\CM0001.dproj=C:\Users\Panharath\Documents\Embarcadero\Studio\Projects\Package1.dproj</Transaction>
+    <Transaction>2017/05/17 11:43:57.000.774,=D:\MyManagement\JewelryDBMS\Src\CM\CM0001\Unit2.pas</Transaction>
+    <Transaction>2017/05/17 11:44:22.000.275,D:\MyManagement\JewelryDBMS\Src\CM\CM0001\uCM0001.pas=D:\MyManagement\JewelryDBMS\Src\CM\CM0001\Unit2.pas</Transaction>
+    <Transaction>2017/05/17 11:44:22.000.275,D:\MyManagement\JewelryDBMS\Src\CM\CM0001\uCM0001.dfm=D:\MyManagement\JewelryDBMS\Src\CM\CM0001\Unit2.dfm</Transaction>
+    <Transaction>2017/05/17 11:45:17.000.717,=vcl.dcp</Transaction>
+  </Transactions>
+</BorlandProject>

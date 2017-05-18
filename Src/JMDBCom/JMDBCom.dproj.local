@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2017/05/17 08:45:04.000.431,=rtl.dcp</Transaction>
+    <Transaction>2017/05/17 08:46:27.000.088,D:\MyManagement\JewelryDBMS\Src\JMDBCom\JMDBCom.dproj=C:\Users\Panharath\Documents\Embarcadero\Studio\Projects\Package1.dproj</Transaction>
+    <Transaction>2017/05/17 08:46:41.000.920,=D:\MyManagement\JewelryDBMS\Src\JMDBCom\Unit1.pas</Transaction>
+    <Transaction>2017/05/17 08:46:51.000.522,D:\MyManagement\JewelryDBMS\Src\JMDBCom\uJMDBCom.pas=D:\MyManagement\JewelryDBMS\Src\JMDBCom\Unit1.pas</Transaction>
+    <Transaction>2017/05/17 09:29:27.000.053,=FireDACCommon.dcp</Transaction>
+    <Transaction>2017/05/17 09:29:27.000.047,=FireDACCommonDriver.dcp</Transaction>
+    <Transaction>2017/05/17 09:29:27.000.021,=vcl.dcp</Transaction>
+    <Transaction>2017/05/17 09:29:27.000.059,=FireDACIBDriver.dcp</Transaction>
+    <Transaction>2017/05/17 09:29:27.000.040,=FireDAC.dcp</Transaction>
+    <Transaction>2017/05/17 09:29:27.000.031,=dbrtl.dcp</Transaction>
+  </Transactions>
+</BorlandProject>
